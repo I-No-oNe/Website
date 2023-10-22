@@ -7,11 +7,14 @@
       margin: 0;
       padding: 0;
       background-color: #36b500;
+      display: flex;
+      align-items: center;
     }
 
     .content {
       text-align: center;
       padding: 100px;
+      flex: 1; /* Allow content to take up remaining space */
     }
 
     h1 {
@@ -21,8 +24,12 @@
 
     .logo {
       position: absolute;
-      top: 0;
-      left: 0;
+      bottom: 0;
+      left: 50px; /* Adjust this value to your preference */
+    }
+
+    a {
+      position: relative;
     }
   </style>
 </head>
