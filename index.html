@@ -1,46 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="icon" href="1.png" type="image/png"> <!-- Replace "face.png" with "1.png" -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="1.png" type="image/png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #36b500;
       display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Montserrat', sans-serif;
+      position: relative;
     }
 
     .content {
       text-align: center;
-      padding: 100px;
-      flex: 1; /* Allow content to take up remaining space */
+      padding: 20px;
     }
 
     h1 {
       font-size: 48px;
       color: #fff;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 29px;
+      color: #fff;
     }
 
     .logo {
-      position: absolute;
-      bottom: -200px; /* Adjust this value to move the image down */
-      left: 50px; /* Adjust this value to your preference */
+      width: 250px;
     }
 
-    a {
-      position: relative;
+    .github-link {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .github-logo {
+      width: 30px; /* Adjust the size of the GitHub logo */
+      margin-right: 10px; /* Adjust the spacing */
+    }
+
+    a:hover .logo {
+      transform: scale(1.1);
+    }
+
+    .projects {
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    .nova-square-font {
+      font-family: 'Nova Square', sans-serif;
+    }
+
+    .project-link {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .clickcrystals { color: #26ded8; }
+    .glowing-entities { color: #e2ff29; }
+    .clickcrystalpluspack { color: #00d9bf; }
+    .plus { color: #0a8994; }
+
+    .project-link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <a href="https://modrinth.com/user/I-No-oNe" target="_blank">
-    <img src="face.png" alt="Logo" class="logo">
+<div class="content">
+  <h1>Still in progress</h1>
+  <h3>I-No-oNe website</h3>
+  <a href="https://github.com/I-No-oNe" target="_blank" class="github-link">
+    <img src="github.png" alt="GitHub Logo" class="github-logo">
+    I-No-oNe's GitHub
   </a>
-  <div class="content">
-    <h1>Still in progress</h1>
-    <h3>I-No-oNe website</h3>
+  <a href="https://modrinth.com/user/I-No-oNe" target="_blank">
+    <img src="huge_2023-05-25_11.58.21.png" alt="Logo" class="logo">
+  </a>
+  <div class="projects">
+    <p class="nova-square-font">Some of my projects:</p>
+    <p><a href="https://modrinth.com/mod/clickcrystals" target="_blank" class="project-link clickcrystals">ClickCrystals</a></p>
+    <p><a href="https://modrinth.com/resourcepack/clickcrystalplus-pack" target="_blank" class="project-link clickcrystalpluspack">The ClickCrystal<span class="plus">+</span> Pack</a></p>
+    <p><a href="https://modrinth.com/mod/glowing-entities" target="_blank" class="project-link glowing-entities">Glowing-entities</a></p>
   </div>
+</div>
 </body>
 </html>
-### im not sure if it will work
