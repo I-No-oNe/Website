@@ -3,104 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/site_icon.png" type="image/png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #36b500;
+      background-color: #000;
+      height: 100vh;
+      overflow: hidden; /* Hide overflowing content */
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      font-family: 'Montserrat', sans-serif;
-      position: relative;
     }
 
-    .content {
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 48px;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-
-    h3 {
-      font-size: 29px;
-      color: #fff;
-    }
-
-    .logo {
-      width: 250px;
-    }
-
-    .github-link {
+    .falling-image {
+      width: 50px; /* Adjust the width as needed */
       position: absolute;
-      top: 20px;
-      right: 20px;
-      text-decoration: none;
-      color: #000000;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
+      left: -50px; /* Start from the left outside the viewport */
+      animation: fallAndMirror 3s forwards ease-in-out infinite; /* Animation properties */
     }
 
-    .github-logo {
-      width: 30px; /* Adjust the size of the GitHub logo */
-      margin-right: 10px; /* Adjust the spacing */
+    .falling-image:nth-child(2) {
+      width: 75px; /* Adjust the width as needed */
+      left: -75px; /* Start from the left outside the viewport */
+      top: 20vh; /* Adjust the starting Y level from the top */
+      animation-delay: 1s; /* Delay the start of the animation */
     }
 
-    a:hover .logo {
-      transform: scale(1.1);
+    .falling-image:nth-child(3) {
+      width: 100px; /* Adjust the width as needed */
+      left: -100px; /* Start from the left outside the viewport */
+      top: 40vh; /* Adjust the starting Y level from the top */
+      animation-delay: 2s; /* Delay the start of the animation */
     }
 
-    .projects {
-      color: #fff;
-      margin-top: 20px;
+    .falling-image:nth-child(4) {
+      width: 60px; /* Adjust the width as needed */
+      left: -60px; /* Start from the left outside the viewport */
+      bottom: 20vh; /* Adjust the starting Y level from the bottom */
+      animation-delay: 0.5s; /* Delay the start of the animation */
     }
 
-    .nova-square-font {
-      font-family: 'Nova Square', sans-serif;
+    .falling-image:nth-child(5) {
+      width: 90px; /* Adjust the width as needed */
+      left: -90px; /* Start from the left outside the viewport */
+      bottom: 40vh; /* Adjust the starting Y level from the bottom */
+      animation-delay: 1.5s; /* Delay the start of the animation */
     }
 
-    .project-link {
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .clickcrystals { color: #26ded8; }
-    .glowing-entities { color: #e2ff29; }
-    .clickcrystalpluspack { color: #00d9bf; }
-    .plus { color: #0a8994; }
-
-    .project-link:hover {
-      text-decoration: underline;
+    @keyframes fallAndMirror {
+      0% {
+        left: -250px; /* Start from the left outside the viewport */
+        transform: scaleX(-1) rotate(0deg); /* Initial transformation */
+      }
+      100% {
+        left: 100vw; /* Move to the right outside the viewport */
+        transform: scaleX(-1) rotate(-360deg); /* Final transformation */
+      }
     }
   </style>
+  <title>Falling and Mirroring</title>
 </head>
 <body>
-<div class="content">
-  <h1>Still in progress</h1>
-  <h3>I-No-oNe website</h3>
-  <a href="https://github.com/I-No-oNe" target="_blank" class="github-link">
-    <img src="images/github.png" alt="GitHub Logo" class="github-logo">
-    I-No-oNe's GitHub
-  </a>
-  <a href="https://modrinth.com/user/I-No-oNe" target="_blank">
-    <img src="images/picture_1.png" alt="Logo" class="logo">
-  </a>
-  <div class="projects">
-    <p class="nova-square-font">Some of my projects:</p>
-    <p><a href="https://modrinth.com/mod/clickcrystals" target="_blank" class="project-link clickcrystals">ClickCrystals</a></p>
-    <p><a href="https://modrinth.com/resourcepack/clickcrystalplus-pack" target="_blank" class="project-link clickcrystalpluspack">The ClickCrystal<span class="plus">+</span> Pack</a></p>
-    <p><a href="https://modrinth.com/mod/glowing-entities" target="_blank" class="project-link glowing-entities">Glowing-entities</a></p>
-  </div>
-</div>
+<img src="images/I-No-oNe.png" alt="I-No-oNe" class="falling-image">
+<img src="images/I-No-oNe.png" alt="I-No-oNe" class="falling-image">
+<img src="images/I-No-oNe.png" alt="I-No-oNe" class="falling-image">
+<img src="images/I-No-oNe.png" alt="I-No-oNe" class="falling-image">
+<img src="images/I-No-oNe.png" alt="I-No-oNe" class="falling-image">
 </body>
 </html>
