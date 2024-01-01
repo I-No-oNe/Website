@@ -3,64 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      height: 100vh;
-      overflow: hidden; /* Hide overflowing content */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .falling-image {
-      width: 50px; /* Adjust the width as needed */
-      position: absolute;
-      left: -50px; /* Start from the left outside the viewport */
-      animation: fallAndMirror 3s forwards ease-in-out infinite; /* Animation properties */
-    }
-
-    .falling-image:nth-child(2) {
-      width: 75px; /* Adjust the width as needed */
-      left: -75px; /* Start from the left outside the viewport */
-      top: 20vh; /* Adjust the starting Y level from the top */
-      animation-delay: 1s; /* Delay the start of the animation */
-    }
-
-    .falling-image:nth-child(3) {
-      width: 100px; /* Adjust the width as needed */
-      left: -100px; /* Start from the left outside the viewport */
-      top: 40vh; /* Adjust the starting Y level from the top */
-      animation-delay: 2s; /* Delay the start of the animation */
-    }
-
-    .falling-image:nth-child(4) {
-      width: 60px; /* Adjust the width as needed */
-      left: -60px; /* Start from the left outside the viewport */
-      bottom: 20vh; /* Adjust the starting Y level from the bottom */
-      animation-delay: 0.5s; /* Delay the start of the animation */
-    }
-
-    .falling-image:nth-child(5) {
-      width: 90px; /* Adjust the width as needed */
-      left: -90px; /* Start from the left outside the viewport */
-      bottom: 40vh; /* Adjust the starting Y level from the bottom */
-      animation-delay: 1.5s; /* Delay the start of the animation */
-    }
-
-    @keyframes fallAndMirror {
-      0% {
-        left: -250px; /* Start from the left outside the viewport */
-        transform: scaleX(-1) rotate(0deg); /* Initial transformation */
-      }
-      100% {
-        left: 100vw; /* Move to the right outside the viewport */
-        transform: scaleX(-1) rotate(-360deg); /* Final transformation */
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/rectangle-styles.css">
   <title>Falling and Mirroring</title>
 </head>
 <body>
@@ -69,5 +13,14 @@
 <img src="images/I-No-oNe.png" alt="I-No-oNe" class="falling-image">
 <img src="images/I-No-oNe.png" alt="I-No-oNe" class="falling-image">
 <img src="images/I-No-oNe.png" alt="I-No-oNe" class="falling-image">
+
+<div class="rounded-rectangle">
+  I-No-oNe website
+
+  <div class="sub-rectangle">
+    <h2>What I usually do?</h2>
+    <img src="images/big_icon.png" alt="Big Icon" class="centered-image scaled-down">
+  </div>
+</div>
 </body>
 </html>

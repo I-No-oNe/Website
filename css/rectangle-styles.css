@@ -1,0 +1,52 @@
+@keyframes glowingBorder {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+  }
+}
+
+.rounded-rectangle {
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 100px;
+  color: #4CAF50;
+  font-size: 18px;
+  font-family: 'Aharoni', sans-serif;
+  z-index: 1;
+  animation: glowingBorder 2s infinite;
+}
+
+.sub-rectangle {
+  width: 80%;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  animation: glowingBorder 2s infinite; /* Add glowing animation to the second rectangle */
+}
+
+.sub-rectangle h2 {
+  font-size: 16px; /* Reduce font size for the heading */
+}
+
+.sub-rectangle p {
+  font-size: 14px; /* Reduce font size for paragraphs */
+}
+
+.centered-image {
+  display: block;
+  margin: 20px auto;
+}

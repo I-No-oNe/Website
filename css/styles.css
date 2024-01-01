@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.falling-image {
+  width: 50px;
+  position: absolute;
+  left: -50px;
+  animation: fallAndMirror 3s forwards ease-in-out infinite;
+}
+
+.falling-image:nth-child(2) {
+  width: 75px;
+  left: -75px;
+  top: 20vh;
+  animation-delay: 1s;
+}
+
+.falling-image:nth-child(3) {
+  width: 100px;
+  left: -100px;
+  top: 40vh;
+  animation-delay: 2s;
+}
+
+.falling-image:nth-child(4) {
+  width: 60px;
+  left: -60px;
+  bottom: 20vh;
+  animation-delay: 0.5s;
+}
+
+.falling-image:nth-child(5) {
+  width: 90px;
+  left: -90px;
+  bottom: 40vh;
+  animation-delay: 1.5s;
+}
+
+@keyframes fallAndMirror {
+  0% {
+    left: -250px;
+    transform: scaleX(-1) rotate(0deg);
+  }
+  100% {
+    left: 100vw;
+    transform: scaleX(-1) rotate(-360deg);
+  }
+}
+.scaled-down {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto; /* Maintain the aspect ratio */
+  max-height: 100px; /* Set the maximum height as needed */
+}
+
